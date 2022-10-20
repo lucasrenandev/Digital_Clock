@@ -11,7 +11,7 @@ const dateContentElement = document.getElementById("date-content")
 const monthContentElement = document.getElementById("month-content")
 const yearContentElement = document.getElementById("year-content")
 
-// CRIANDO OS DIAS DA SEMANA E ATRUBUINDO EM UM ARRAY
+// CRIANDO OS DIAS DA SEMANA E ATRIBUINDO EM UM ARRAY
 const daysWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 // CRIANDO OS MÊSES DO ANO A ATRIBUINDO EM UM ARRAY
