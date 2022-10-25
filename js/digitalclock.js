@@ -17,7 +17,7 @@ const daysWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 // CRIANDO OS MÊSES DO ANO A ATRIBUINDO EM UM ARRAY
 const fullYear = ["January", "February", "March", "April", "May", "june", "July", "August", "September", "Octuber", "November", "December"]
 
-// FUNÇÃO PARA ADICIONAR ITEM DE APOIO
+// FUNÇÃO PARA ADICIONAR VALOR DE APOIO
 function addNumber(element) {
     if(element < 10) {
         return "0" + element
@@ -27,7 +27,7 @@ function addNumber(element) {
     }
 }
 
-// FUNÇÃO PARA BUSCAR DATA ATUAL DO SISTEMA
+// FUNÇÃO PARA OBTER DATA ATUAL DO SISTEMA
 function getDate() {
     const today = new Date()
     const day = today.getDay()
@@ -35,8 +35,8 @@ function getDate() {
     const month = today.getMonth()
     const year = today.getFullYear()
 
-    dayElement.textContent = daysWeek[day] + " , "
-    dateElement.textContent = addNumber(date) + " , " 
+    dayElement.textContent = daysWeek[day] + ","
+    dateElement.textContent = addNumber(date) + "," 
     monthElement.textContent = fullYear[month] 
     yearElement.textContent = year
     dateContentElement.textContent = addNumber(date)
@@ -46,7 +46,7 @@ function getDate() {
 // CHAMANDO A FUNÇÃO NO DOCUMENTO
 getDate()
 
-// FUNÇÃO PARA BUSCAR HORA ATUAL DO SISTEMA
+// FUNÇÃO PARA OBTER HORA ATUAL DO SISTEMA
 function digitalClock() {
     const date = new Date()
     const hours = date.getHours()
