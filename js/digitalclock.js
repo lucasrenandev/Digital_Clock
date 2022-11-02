@@ -15,9 +15,9 @@ const yearContentElement = document.getElementById("year-content")
 const daysWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 // CRIANDO OS MÊSES DO ANO A ATRIBUINDO EM UM ARRAY
-const fullYear = ["January", "February", "March", "April", "May", "june", "July", "August", "September", "Octuber", "November", "December"]
+const fullYear = ["January", "February", "March", "April", "May", "june", "July", "August", "September", "October", "November", "December"]
 
-// FUNÇÃO PARA ADICIONAR VALOR DE APOIO
+// FUNÇÃO PARA ADICIONAR VALOR
 function addNumber(element) {
     if(element < 10) {
         return "0" + element
@@ -36,14 +36,15 @@ function getDate() {
     const year = today.getFullYear()
 
     dayElement.textContent = daysWeek[day] + ","
-    dateElement.textContent = addNumber(date) + "," 
     monthElement.textContent = fullYear[month] 
+    dateElement.textContent = addNumber(date) + "," 
     yearElement.textContent = year
+
     dateContentElement.textContent = addNumber(date)
     monthContentElement.textContent = addNumber(month + 1) + " / "
     yearContentElement.textContent = year + " / "
 }
-// CHAMANDO A FUNÇÃO NO DOCUMENTO
+// CHAMANDO A FUNÇÃO OBTER DATA NO DOCUMENTO
 getDate()
 
 // FUNÇÃO PARA OBTER HORA ATUAL DO SISTEMA
@@ -63,7 +64,7 @@ function digitalClock() {
         periodHoursElement.textContent = "PM"
     }
 }
-// CHAMANDO A FUNÇÃO NO DOCUMENTO
+// CHAMANDO A FUNÇÃO OBTER HORA NO DOCUMENTO
 digitalClock()
 
 // ADICIONANDO INTERVALO NO DOCUMENTO
