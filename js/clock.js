@@ -2,14 +2,14 @@
 const hoursElement = document.getElementById("hours")
 const minutesElement = document.getElementById("minutes")
 const secondsElement = document.getElementById("seconds")
-const periodHoursElement = document.getElementById("period-hours")
+const periodHours = document.getElementById("period-hours")
 const dayElement = document.getElementById("day-element")
 const dateElement = document.getElementById("date-element")
 const monthElement = document.getElementById("month-element")
 const yearElement = document.getElementById("year-element")
-const dateContentElement = document.getElementById("date-content")
-const monthContentElement = document.getElementById("month-content")
-const yearContentElement = document.getElementById("year-content")
+const dateContent = document.getElementById("date-content")
+const monthContent = document.getElementById("month-content")
+const yearContent = document.getElementById("year-content")
 
 // CRIANDO OS DIAS DA SEMANA E ATRIBUINDO EM UM ARRAY
 const daysWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -40,9 +40,9 @@ function getDate() {
     dateElement.textContent = addNumber(date) + "," 
     yearElement.textContent = year
 
-    dateContentElement.textContent = addNumber(date)
-    monthContentElement.textContent = addNumber(month + 1) + " / "
-    yearContentElement.textContent = year + " / "
+    dateContent.textContent = addNumber(date)
+    monthContent.textContent = addNumber(month + 1) + " / "
+    yearContent.textContent = year + " / "
 }
 // CHAMANDO A FUNÇÃO OBTER DATA NO DOCUMENTO
 getDate()
@@ -58,10 +58,10 @@ function digitalClock() {
     secondsElement.textContent = addNumber(seconds)
 
     if(hours < 12) {
-        periodHoursElement.textContent = "AM"
+        periodHours.textContent = "AM"
     }
     else {
-        periodHoursElement.textContent = "PM"
+        periodHours.textContent = "PM"
     }
 }
 // CHAMANDO A FUNÇÃO OBTER HORA NO DOCUMENTO
