@@ -36,8 +36,8 @@ function getDate() {
     const year = today.getFullYear()
 
     dayElement.textContent = daysWeek[day] + ","
+    dateElement.textContent = date + "," 
     monthElement.textContent = fullYear[month] 
-    dateElement.textContent = addNumber(date) + "," 
     yearElement.textContent = year
 
     dateContent.textContent = addNumber(date)
